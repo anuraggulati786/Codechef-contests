@@ -1,0 +1,88 @@
+ONLINE ROUND 2021 1-A:-->>
+
+
+You are given two positive integers X and K.
+
+You have to output the minimum and maximum value of LCM(i,j) where X≤i<j≤X⋅K.
+
+We define LCM(i,j) for two positive integers i and j as the minimum positive integer y such that both i and j divide y without remainder.
+
+Input Format
+First line will contain T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, two space separated integers X and K.
+Output Format
+For each testcase, output two space separated integers - the minimum and maximum possible value respectively of LCM(i,j) where X≤i<j≤X⋅K.
+
+Constraints
+1≤T≤105
+1≤X≤108
+2≤K≤108
+It is guaranteed that, for each test case, X⋅K≤109
+Sample Input 1 
+2
+4 3
+2 3
+Sample Output 1 
+8 132
+4 30
+Explanation
+Test Case 1: We want to find the minimum and maximum value of LCM(i,j) for 4≤i<j≤12. It is easy to verify that the LCM(4,8)=8 is the minimum possible value whereas LCM(11,12)=132 is the maximum value.
+
+Test Case 2: We want to find the minimum and maximum value of LCM(i,j) for 2≤i<j≤6. The maximum value is obtained for the pair (5,6) whereas the minimum is obtained for the pair (2,4).
+
+
+
+
+
+
+###########***********C++ CODE *****##############
+
+
+
+#include<bits/stdc++.h>
+#include<map>
+
+#include<iterator>
+#include<vector>
+#include <algorithm>
+using namespace std;
+
+#define ll long long 
+#define fastIO ios_base::sync_with_stdio(false);
+#define fastIN cin.tie(NULL);
+#define mod 1e9 +7
+#define ff first
+#define ss second
+#define vi vector<int>
+#define vvi vector<vi>
+#define pii pair<int,int>
+#define vii vector<pii>
+#define rep(a,b)  for(int i=a;i<b;i++)
+#define repr(a,b)  for(int i=a-1;i>=b;i--)
+#define pb  push_back
+#define w while
+
+const int N = 1e5+2;
+
+void solution(){
+  ll x,y;
+  cin>>x>>y;
+
+  cout<<x*2<<" "<<(x*y)*((x*y)-1)<<endl;
+
+}
+
+
+
+int main(){
+
+    fastIO
+    fastIN
+   ll t;
+   cin >>t;
+     w(t--){ 
+      solution();
+}
+
+ return 0;
+}
